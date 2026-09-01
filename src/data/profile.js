@@ -33,9 +33,11 @@ export const profileData = {
   },
 
   contact: {
-    email: "email@example.com", // Placeholder as instructed
-    github: "https://github.com/placeholder",
-    linkedin: "https://linkedin.com/in/placeholder",
+    email: "adhikchris123@gmail.com",
+    whatsapp: "https://wa.me/6283852560804",
+    whatsappDisplay: "+62 838-5256-0804",
+    github: "https://github.com/chrr1",
+    linkedin: "https://www.linkedin.com/in/adik-christian-purwaningtresno-2904223b0/",
     heading: {
       id: "LET'S BUILD SOMETHING.",
       en: "LET'S BUILD SOMETHING."

@@ -21,10 +21,11 @@ const marqueeStyles = `
 
 const levelColor = (level) => {
   if (level === 'Intermediate')
-    return 'text-zinc-950 dark:text-zinc-50 border-zinc-950 dark:border-zinc-50';
+    return 'text-zinc-950 dark:text-zinc-50 border-zinc-950 dark:border-zinc-50 font-bold';
   if (level === 'Familiar')
-    return 'text-zinc-500 dark:text-zinc-400 border-zinc-400 dark:border-zinc-600';
-  return 'text-zinc-300 dark:text-zinc-700 border-zinc-200 dark:border-zinc-800';
+    return 'text-zinc-800 dark:text-zinc-300 border-zinc-500 dark:border-zinc-600 font-semibold';
+  // Learning — high contrast dark text in light mode for easy reading
+  return 'text-zinc-700 dark:text-zinc-400 border-zinc-300 dark:border-zinc-700 font-normal';
 };
 
 /* Row config: font size, direction, speed */
@@ -78,17 +79,17 @@ export const Skills = () => {
             </h2>
           </div>
           {/* Legend */}
-          <div className="flex items-center gap-5 text-[11px] font-mono text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">
+          <div className="flex items-center gap-5 text-[11px] font-mono text-zinc-500 dark:text-zinc-500 uppercase tracking-widest">
             <span className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-zinc-950 dark:bg-zinc-50 inline-block" />
               Intermediate
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-zinc-400 dark:bg-zinc-500 inline-block" />
+              <span className="w-2 h-2 rounded-full bg-zinc-500 dark:bg-zinc-500 inline-block" />
               Familiar
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-zinc-200 dark:bg-zinc-700 inline-block" />
+              <span className="w-2 h-2 rounded-full bg-zinc-400 dark:bg-zinc-700 inline-block" />
               Learning
             </span>
           </div>
@@ -135,19 +136,19 @@ export const Skills = () => {
                     key={sIdx}
                     className={`text-sm font-medium flex items-center gap-2 ${
                       skill.level.en === 'Intermediate'
-                        ? 'text-zinc-900 dark:text-zinc-100'
+                        ? 'text-zinc-950 dark:text-zinc-100 font-semibold'
                         : skill.level.en === 'Familiar'
-                        ? 'text-zinc-600 dark:text-zinc-400'
-                        : 'text-zinc-400 dark:text-zinc-600'
+                        ? 'text-zinc-800 dark:text-zinc-300'
+                        : 'text-zinc-700 dark:text-zinc-400'
                     }`}
                   >
                     <span
                       className={`w-1.5 h-1.5 rounded-full shrink-0 ${
                         skill.level.en === 'Intermediate'
-                          ? 'bg-zinc-900 dark:bg-zinc-100'
+                          ? 'bg-zinc-950 dark:bg-zinc-100'
                           : skill.level.en === 'Familiar'
-                          ? 'bg-zinc-400 dark:bg-zinc-500'
-                          : 'bg-zinc-200 dark:bg-zinc-700'
+                          ? 'bg-zinc-600 dark:bg-zinc-400'
+                          : 'bg-zinc-400 dark:bg-zinc-600'
                       }`}
                     />
                     {skill.name}
