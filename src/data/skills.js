@@ -58,7 +58,12 @@ export const skillsData = {
         { name: "Git", level: { id: "Familiar", en: "Familiar" } },
         { name: "GitHub", level: { id: "Familiar", en: "Familiar" } },
         { name: "VS Code", level: { id: "Intermediate", en: "Intermediate" } },
-        { name: "VirtualBox", level: { id: "Familiar", en: "Familiar" } }
+        { name: "Android Studio", level: { id: "Familiar", en: "Familiar" } },
+        { name: "VirtualBox", level: { id: "Familiar", en: "Familiar" } },
+        { name: "Linux", level: { id: "Familiar", en: "Familiar" } },
+        { name: "Figma", level: { id: "Intermediate", en: "Intermediate" } },
+        { name: "Postman", level: { id: "Familiar", en: "Familiar" } },
+        { name: "XAMPP", level: { id: "Intermediate", en: "Intermediate" } },
       ]
     }
   ],

@@ -47,26 +47,30 @@ export const Navbar = () => {
   return (
     <>
       {/* Top Fixed Minimal Navbar Header */}
-      <header 
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          scrolled 
-            ? 'bg-zinc-50/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-200/60 dark:border-zinc-800/60 py-4' 
+      <header
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled
+            ? 'bg-zinc-50/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-200/60 dark:border-zinc-800/60 py-4'
             : 'bg-transparent py-6'
-        }`}
+          }`}
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          
+
           {/* Brand Logo */}
-          <a 
-            href="#home" 
-            className="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50 hover:opacity-80 transition-opacity"
+          <a
+            href="#home"
+            className="flex items-center hover:opacity-80 transition-opacity"
+            aria-label="Home"
           >
-            {profileData.shortName}<span className="text-zinc-400 dark:text-zinc-500">.</span>
+            <img
+              src="/images/icon-profile-removebg.png"
+              alt={profileData.name}
+              className="w-12 h-12 object-contain rounded-full border-2 border-zinc-600 bg-black"
+            />
           </a>
 
           {/* Right Action Controls: Language, Theme & Toggle Menu Trigger */}
           <div className="flex items-center space-x-3">
-            
+
             {/* Language Switcher Button */}
             <button
               onClick={toggleLanguage}
@@ -119,7 +123,7 @@ export const Navbar = () => {
       {/* Full-Screen Overlay Toggle Menu (Desktop & Mobile) */}
       {menuOpen && (
         <div className="fixed inset-0 z-50 bg-zinc-950/95 dark:bg-zinc-950/98 backdrop-blur-xl text-zinc-50 flex flex-col justify-between p-6 sm:p-12 animate-in fade-in duration-300">
-          
+
           {/* Menu Header Bar inside Overlay */}
           <div className="max-w-6xl w-full mx-auto flex items-center justify-between border-b border-zinc-800/80 pb-6">
             <span className="text-xl font-extrabold tracking-tight text-zinc-100">

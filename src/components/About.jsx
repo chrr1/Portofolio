@@ -21,13 +21,12 @@ export const About = () => {
           {/* Left Column: Philosophical Tagline & Main Copy */}
           <div className="lg:col-span-8 space-y-6">
             <h2 className="text-3xl sm:text-5xl font-extrabold text-zinc-950 dark:text-zinc-50 tracking-tight leading-tight">
-              {t(profileData.bio.headline)}
+              {t({ id: profileData.bio.id.headline, en: profileData.bio.en.headline })}
             </h2>
 
             <div className="space-y-4 text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal pt-4 border-t border-zinc-200 dark:border-zinc-800">
-              <p>{t(profileData.bio.paragraph1)}</p>
-              <p>{t(profileData.bio.paragraph2)}</p>
-              <p>{t(profileData.bio.paragraph3)}</p>
+              <p>{t({ id: profileData.bio.id.paragraph1, en: profileData.bio.en.paragraph1 })}</p>
+              <p>{t({ id: profileData.bio.id.paragraph2, en: profileData.bio.en.paragraph2 })}</p>
             </div>
           </div>
 

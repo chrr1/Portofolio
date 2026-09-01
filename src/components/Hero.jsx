@@ -65,7 +65,7 @@ export const Hero = () => {
             ABOUT ME
           </span>
           <p className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed font-normal">
-            {t(profileData.bio.paragraph1)}
+            {t({ id: profileData.bio.id.paragraph1, en: profileData.bio.en.paragraph1 })}
           </p>
         </div>
 
@@ -80,11 +80,6 @@ export const Hero = () => {
           <span>SCROLL</span>
           <ArrowDown className="w-3.5 h-3.5 animate-bounce" />
         </a>
-
-        <div className="flex items-center space-x-4">
-          <span className="uppercase">{profileData.university}</span>
-          <span>01</span>
-        </div>
       </div>
 
     </section>

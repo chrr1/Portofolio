@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg" href="public/images/icon-profile.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adik Christian Purwaningtresno — Software Engineering Student</title>
   <meta name="description"
@@ -12,7 +12,18 @@
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Dark mode init: runs before render to prevent flash of light mode -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (!saved || saved === 'dark') {
+        document.documentElement.classList.add('dark');
+        if (!saved) localStorage.setItem('theme', 'dark');
+      }
+    })();
+  </script>
 </head>
 
 <body

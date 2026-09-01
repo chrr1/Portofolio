@@ -21,16 +21,14 @@ export const profileData = {
 
   bio: {
     id: {
-      headline: "Saya membangun software dengan tujuan, fondasi yang kuat, dan rasa ingin tahu yang besar.",
-      paragraph1: "Saya adalah mahasiswa S1 Rekayasa Perangkat Lunak di Universitas Pignatelli Triputra yang sedang membangun kemampuan dalam software engineering, web development, cybersecurity, dan artificial intelligence.",
-      paragraph2: "Saya tertarik pada bagaimana sebuah software dirancang, dibangun, diuji, diamankan, dan dikembangkan menjadi sistem yang benar-benar dapat digunakan. Saya belajar melalui project nyata, eksperimen, personal lab, dan eksplorasi teknologi.",
-      paragraph3: "Saya percaya bahwa kemampuan engineering tidak hanya tentang bisa menulis kode, tetapi juga memahami bagaimana sistem bekerja, bagaimana sistem dapat diamankan, dan bagaimana software dapat dikembangkan secara maintainable."
+      headline: "Mahasiswa RPL yang membangun dengan tujuan dan rasa ingin tahu.",
+      paragraph1: "Mahasiswa S1 Rekayasa Perangkat Lunak di Universitas Pignatelli Triputra, dengan minat di software development, web development, cybersecurity, AI, automation, dan UI/UX design.",
+      paragraph2: "Saya belajar dengan cara membangun melalui project nyata dan eksplorasi langsung. Saya fokus pada kode yang bersih, sistem yang aman, dan software yang dapat berkembang."
     },
     en: {
-      headline: "I build software with purpose, strong fundamentals, and continuous curiosity.",
-      paragraph1: "I am a Software Engineering undergraduate student at Universitas Pignatelli Triputra currently building skills in software engineering, web development, cybersecurity, and artificial intelligence.",
-      paragraph2: "I am deeply interested in how software is designed, built, tested, secured, and evolved into systems that solve real problems. I learn through practical projects, experiments, personal labs, and hands-on technology exploration.",
-      paragraph3: "I believe engineering capability is not just about writing code, but understanding system internals, security posture, and architecting maintainable software."
+      headline: "A Software Engineering student who builds with purpose and curiosity.",
+      paragraph1: "Software Engineering undergraduate at Universitas Pignatelli Triputra, with interest in software development, web development, cybersecurity, AI, automation, and UI/UX design.",
+      paragraph2: "I learn by building through real projects and hands-on exploration. I focus on clean code, secure systems, and software that scales."
     }
   },
 
