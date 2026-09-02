@@ -128,19 +128,8 @@ export const ProjectModal = ({ project, onClose }) => {
           </div>
 
           {/* Modal Footer Links */}
-          <div className="p-6 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-end space-x-4 bg-zinc-100/50 dark:bg-zinc-950/50">
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-xs font-mono uppercase font-medium text-zinc-800 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-zinc-50 transition-colors"
-              >
-                <GithubIcon className="w-4 h-4" />
-                <span>GitHub Repository</span>
-              </a>
-            )}
-            {project.liveDemoUrl && (
+          {project.liveDemoUrl && (
+            <div className="p-6 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-end space-x-4 bg-zinc-100/50 dark:bg-zinc-950/50">
               <a
                 href={project.liveDemoUrl}
                 target="_blank"
@@ -150,8 +139,8 @@ export const ProjectModal = ({ project, onClose }) => {
                 <span>Live Demo</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
-            )}
-          </div>
+            </div>
+          )}
         </motion.div>
       </motion.div>
     </AnimatePresence>

@@ -34,7 +34,7 @@ export const projectsData = [
       en: "Completed / Maintained"
     },
     technologies: ["PHP", "HTML5", "CSS3", "JavaScript", "MySQL"],
-    image: "/images/projects/faculty-website.webp",
+    image: "/images/projects/thumb-fakultas.png",
     githubUrl: "https://github.com/placeholder/faculty-website",
     liveDemoUrl: null,
     featured: true
@@ -52,7 +52,7 @@ export const projectsData = [
       en: "Personal Project / Experimental"
     },
     technologies: ["Python", "SpeechRecognition", "PyAudio", "OS Automation", "CLI"],
-    image: "/images/projects/alexa.webp",
+    image: "/images/projects/thumb-alexa.png",
     githubUrl: "https://github.com/placeholder/alexa-assistant",
     liveDemoUrl: null,
     featured: true
@@ -92,6 +92,28 @@ export const projectsData = [
     technologies: ["Flutter", "Dart", "Mobile UI", "State Management"],
     image: "/images/projects/thumb-pixelnest.png",
     githubUrl: "https://github.com/placeholder/pixelnest",
+    liveDemoUrl: null,
+    featured: true
+  },
+  {
+    id: "06",
+    title: "ElectraTour",
+    category: "Web Development / Travel",
+    role: {
+      id: "Fullstack Web Developer",
+      en: "Fullstack Web Developer"
+    },
+    description: {
+      id: "Website travel yang menyediakan jasa perjalanan domestik dan internasional serta layanan pengurusan visa, dibangun menggunakan Laravel.",
+      en: "A travel website providing domestic and international travel services as well as visa application services, built with Laravel."
+    },
+    status: {
+      id: "Completed / Production",
+      en: "Completed / Production"
+    },
+    technologies: ["Laravel", "PHP", "Tailwind CSS", "MySQL", "JavaScript"],
+    image: "/images/projects/thumb-electra.png",
+    githubUrl: "https://github.com/placeholder/electratour",
     liveDemoUrl: null,
     featured: true
   }
