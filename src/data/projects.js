@@ -12,7 +12,7 @@ export const projectsData = [
       en: "In Development"
     },
     technologies: ["React", "Node.js", "Express", "Tailwind CSS", "REST API"],
-    image: "/images/projects/vaultpay.webp",
+    image: "/images/projects/thumb-vault.png",
     githubUrl: "https://github.com/placeholder/vaultpay",
     liveDemoUrl: null,
     featured: true
@@ -71,7 +71,7 @@ export const projectsData = [
     },
     environment: "Kali Linux, VirtualBox, Metasploitable, DVWA",
     technologies: ["Nmap", "NSE", "Gobuster", "Nikto", "Burp Suite", "Wireshark", "Linux"],
-    image: "/images/projects/cybersecurity-lab.webp",
+    image: "/images/projects/thumb-cyber.png",
     githubUrl: "https://github.com/placeholder/cybersecurity-lab-notes",
     liveDemoUrl: null,
     isLabNote: true,
@@ -90,7 +90,7 @@ export const projectsData = [
       en: "Learning / Project"
     },
     technologies: ["Flutter", "Dart", "Mobile UI", "State Management"],
-    image: "/images/projects/pixelnest.webp",
+    image: "/images/projects/thumb-pixelnest.png",
     githubUrl: "https://github.com/placeholder/pixelnest",
     liveDemoUrl: null,
     featured: true

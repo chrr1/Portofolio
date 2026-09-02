@@ -11,12 +11,12 @@ export const Hero = () => {
     <section id="home" className="relative min-h-screen flex flex-col justify-between pt-20 pb-6 px-6 sm:px-12 overflow-hidden bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-300">
 
       {/* Center Giant Layered Typography Background */}
-      <div className="absolute top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none select-none z-0">
+      <div className="absolute top-[26%] sm:top-[34%] md:top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none select-none z-0">
         <motion.h1 
           initial={{ opacity: 0, scale: 0.92, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-[17vw] sm:text-[14vw] md:text-[12vw] lg:text-[12rem] font-extrabold tracking-tighter uppercase leading-[0.82] text-zinc-800/90 dark:text-zinc-200/90 transition-colors"
+          className="text-[17vw] sm:text-[13vw] md:text-[9vw] lg:text-[7.5rem] font-extrabold tracking-tighter uppercase leading-[0.82] text-zinc-800/90 dark:text-zinc-200/90 transition-colors"
         >
           SOFTWARE<br />ENGINEER
         </motion.h1>

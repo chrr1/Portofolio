@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { GithubIcon } from './Icons';
 
@@ -10,6 +10,9 @@ import { ProjectModal } from './ProjectModal';
 export const Projects = () => {
   const { lang, t } = useLanguage();
   const [selectedProject, setSelectedProject] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 6);
 
   return (
     <section id="projects" className="py-24 border-t border-zinc-200 dark:border-zinc-800">
@@ -49,15 +52,15 @@ export const Projects = () => {
           </p>
         </motion.div>
 
-        {/* Projects Editorial Showcase Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {projectsData.map((project, idx) => (
+        {/* Projects Showcase Grid (3 cols per row, max 6 initial) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {displayedProjects.map((project, idx) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.7, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -8 }}
               onClick={() => setSelectedProject(project)}
               className="group cursor-pointer flex flex-col bg-zinc-50/50 dark:bg-zinc-900/20 border border-zinc-200 dark:border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors duration-300 shadow-sm hover:shadow-xl"
@@ -75,28 +78,28 @@ export const Projects = () => {
                 />
                 <div className="hidden absolute inset-0 flex-col items-center justify-center p-6 bg-zinc-900 text-zinc-400 text-center">
                   <span className="font-mono text-xs uppercase tracking-widest text-zinc-500 mb-1">{project.id} — {project.category}</span>
-                  <span className="text-2xl font-bold text-zinc-100">{project.title}</span>
+                  <span className="text-xl font-bold text-zinc-100">{project.title}</span>
                 </div>
 
                 {/* Status Overlay Badge */}
-                <div className="absolute top-4 left-4 px-2.5 py-1 bg-zinc-950/80 backdrop-blur-sm rounded text-[10px] font-mono text-zinc-300 uppercase tracking-wider border border-zinc-800">
+                <div className="absolute top-3 left-3 px-2.5 py-1 bg-zinc-950/80 backdrop-blur-sm rounded text-[10px] font-mono text-zinc-300 uppercase tracking-wider border border-zinc-800">
                   {t(project.status)}
                 </div>
               </div>
 
               {/* Text Meta Content */}
-              <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
                 <div>
                   <div className="flex items-center justify-between text-xs font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-wider mb-2">
                     <span>{project.id} / {project.category}</span>
                     <ArrowUpRight className="w-4 h-4 text-zinc-600 dark:text-zinc-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                   </div>
 
-                  <h3 className="text-2xl font-extrabold text-zinc-950 dark:text-zinc-50 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                  <h3 className="text-xl font-extrabold text-zinc-950 dark:text-zinc-50 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="text-sm text-zinc-800 dark:text-zinc-300 mt-2 line-clamp-3 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-zinc-800 dark:text-zinc-300 mt-2 line-clamp-3 leading-relaxed">
                     {t(project.description)}
                   </p>
                 </div>
@@ -121,6 +124,27 @@ export const Projects = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* View All Toggle Button (if total projects > 6) */}
+        {projectsData.length > 6 && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-12 flex justify-center"
+          >
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-3 text-xs font-mono uppercase tracking-wider rounded-lg border border-zinc-300 dark:border-zinc-700 bg-zinc-100/60 dark:bg-zinc-900/60 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-semibold transition-all duration-300 shadow-sm hover:shadow flex items-center space-x-2 group"
+            >
+              <span>
+                {showAll
+                  ? t({ id: "Tampilkan Lebih Sedikit", en: "Show Less" })
+                  : t({ id: `Lihat Semua Projects (${projectsData.length})`, en: `View All Projects (${projectsData.length})` })}
+              </span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showAll ? 'rotate-180' : 'group-hover:translate-y-0.5'}`} />
+            </button>
+          </motion.div>
+        )}
 
       </div>
 

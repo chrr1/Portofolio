@@ -21,12 +21,12 @@ export const profileData = {
 
   bio: {
     id: {
-      headline: "Mahasiswa RPL yang membangun dengan tujuan dan rasa ingin tahu.",
+      headline: "Merancang & Membangun Pengalaman Digital yang Berdampak.",
       paragraph1: "Mahasiswa S1 Rekayasa Perangkat Lunak di Universitas Pignatelli Triputra, dengan minat di software development, web development, cybersecurity, AI, automation, dan UI/UX design.",
       paragraph2: "Saya belajar dengan cara membangun melalui project nyata dan eksplorasi langsung. Saya fokus pada kode yang bersih, sistem yang aman, dan software yang dapat berkembang."
     },
     en: {
-      headline: "A Software Engineering student who builds with purpose and curiosity.",
+      headline: "Crafting & Building Impactful Digital Experiences.",
       paragraph1: "Software Engineering undergraduate at Universitas Pignatelli Triputra, with interest in software development, web development, cybersecurity, AI, automation, and UI/UX design.",
       paragraph2: "I learn by building through real projects and hands-on exploration. I focus on clean code, secure systems, and software that scales."
     }
