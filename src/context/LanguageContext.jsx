@@ -6,7 +6,7 @@ export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState(() => {
     const saved = localStorage.getItem('language');
     if (saved) return saved;
-    return 'id'; // Default Indonesian
+    return 'en'; // Default English
   });
 
   useEffect(() => {
@@ -14,13 +14,13 @@ export const LanguageProvider = ({ children }) => {
   }, [lang]);
 
   const toggleLanguage = () => {
-    setLang(prev => (prev === 'id' ? 'en' : 'id'));
+    setLang(prev => (prev === 'en' ? 'id' : 'en'));
   };
 
   const t = (textObj) => {
     if (!textObj) return '';
     if (typeof textObj === 'string') return textObj;
-    return textObj[lang] || textObj['id'] || textObj['en'] || '';
+    return textObj[lang] || textObj['en'] || textObj['id'] || '';
   };
 
   return (
