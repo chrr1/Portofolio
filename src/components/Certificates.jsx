@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Award, ArrowUpRight, ChevronDown } from 'lucide-react';
+import { Building2, ArrowUpRight, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { certificatesData } from '../data/certificates';
@@ -65,8 +65,19 @@ export const Certificates = () => {
             >
               <div className="space-y-4">
                 <div className="flex items-start justify-between">
-                  <div className="p-3 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-6 h-6" />
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-1 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-sm flex-shrink-0">
+                    {cert.issuerLogo || cert.image ? (
+                      <img 
+                        src={cert.issuerLogo || cert.image} 
+                        alt={cert.issuer || cert.title} 
+                        className="w-full h-full object-contain rounded"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          if (e.target.nextSibling) e.target.nextSibling.style.display = 'block';
+                        }}
+                      />
+                    ) : null}
+                    <Building2 className={`w-6 h-6 text-zinc-400 ${cert.issuerLogo || cert.image ? 'hidden' : 'block'}`} />
                   </div>
                   <ArrowUpRight className="w-4 h-4 text-zinc-600 dark:text-zinc-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </div>
@@ -103,7 +114,7 @@ export const Certificates = () => {
               <span>
                 {showAll
                   ? t({ id: "Tampilkan Lebih Sedikit", en: "Show Less" })
-                  : t({ id: `Lihat Semua Sertifikat (${certificatesData.length})`, en: `View All Certificates (${certificatesData.length})` })}
+                  : t({ id: `Lihat Selengkapnya (${certificatesData.length})`, en: `View More Certificates (${certificatesData.length})` })}
               </span>
               <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showAll ? 'rotate-180' : 'group-hover:translate-y-0.5'}`} />
             </button>
