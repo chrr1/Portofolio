@@ -111,8 +111,8 @@ export const Experience = () => {
                         </div>
 
                         <div className="text-xs font-mono text-zinc-500 dark:text-zinc-400 mt-1 space-y-0.5">
-                          <div>{exp.period}</div>
-                          <div>{exp.location}</div>
+                          <div>{t(exp.period)}</div>
+                          <div>{t(exp.location)}</div>
                         </div>
                       </div>
                     </div>
@@ -123,7 +123,7 @@ export const Experience = () => {
                         {exp.highlights.map((item, i) => (
                           <li key={i} className="flex items-start space-x-2.5">
                             <span className="text-zinc-400 dark:text-zinc-500 select-none mt-0.5">•</span>
-                            <span className="leading-relaxed">{item}</span>
+                            <span className="leading-relaxed">{t(item)}</span>
                           </li>
                         ))}
                       </ul>
